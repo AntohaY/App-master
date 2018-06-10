@@ -29,10 +29,12 @@ namespace App
                 {
                     sender.Connect(remoteEP);
                     //Изменение label'а
+                    Form1.label_send_result.Visible = true;
                     Form1.label_send_result.Text = $"Socket connected to {sender.RemoteEndPoint.ToString()}";
-                    
-                    Form1.label_send_result.Text = $"Sending {File_Path} to the host.";
-                    
+
+                    Form1.label2.Visible = true;
+                    Form1.label2.Text = $"Sending {File_Path} to the host.";
+                    //
                     sender.SendFile(File_Path);
 
                     // Release the socket.  

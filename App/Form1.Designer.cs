@@ -34,8 +34,8 @@
             this.button_send = new System.Windows.Forms.Button();
             this.DialogSave = new System.Windows.Forms.SaveFileDialog();
             this.label_file_name = new System.Windows.Forms.Label();
-            // this.label_send_result = new System.Windows.Forms.Label();
             label_send_result = new System.Windows.Forms.Label();
+            label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -92,8 +92,20 @@
             label_send_result.Name = "label_send_result";
             label_send_result.Size = new System.Drawing.Size(34, 13);
             label_send_result.TabIndex = 7;
+            label_send_result.Visible = false;
             label_send_result.Text = "Blank";
             this.Controls.Add(label_send_result);
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(502, 380);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(35, 13);
+            label2.TabIndex = 8;
+            label2.Text = "label2";
+            label2.Visible = false;
+            this.Controls.Add(label2);
             // 
             // Form1
             // 
@@ -102,6 +114,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::App.Properties.Resources.ok;
             this.ClientSize = new System.Drawing.Size(689, 505);
+            this.Controls.Add(label2);
             this.Controls.Add(label_send_result);
             this.Controls.Add(this.label_file_name);
             this.Controls.Add(this.button_send);
@@ -123,6 +136,7 @@
         private System.Windows.Forms.Button button_send;
         private System.Windows.Forms.SaveFileDialog DialogSave;
         private System.Windows.Forms.Label label_file_name;
+        public static System.Windows.Forms.Label label2;
         public static System.Windows.Forms.Label label_send_result;
     }
 }
